@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  padding: 0px;
+  margin: 0px;
+  background-color: #000;
+}
+
+.forcflexcenter {
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+iframe {
+  display: none !important;
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+}
+
+.p-0 {
+  padding: 0px;
+}
+
+.p0 {
+  padding: 0px;
+}
+
+// All transitions
+div,
+ul,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+button {
+  -webkit-transition: background-color 0.7s ease-out;
+  -moz-transition: background-color 1s ease-out;
+  -o-transition: background-color 1s ease-out;
+  transition: background-color 1s ease-out;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none !important;
+}
+
+input:focus {
+  outline: none !important;
+}
+
+.form-control:focus {
+  box-shadow: unset;
+}
+
+@media (max-width: 600px) {
+  .modal.show .modal-dialog {
+    max-width: 100% !important;
+  }
+}
+
+a {
+  cursor: pointer;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea:focus-visible {
+  outline: none !important;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea:focus {
+  outline: none !important;
+}
+
+// calnder range picker scss here......................
+.rs-picker-menu {
+  top: 243.05px !important;
+  right: 66px !important;
+  left: unset !important;
+  background: #FFFFFF !important;
+  border: 1px solid #E3E3E3 !important;
+  border-radius: 5px !important;
+  box-shadow: unset !important;
+}
+
+.rs-picker-daterange-header {
+  display: none !important;
+}
+
+.rs-calendar-table-cell-content {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px !important;
+  line-height: 16px !important;
+  // letter-spacing: 0.03em;
+  color: #2D3436;
+}
+
+.rs-calendar-table-cell-is-today .rs-calendar-table-cell-content {
+  background: #FF0083 !important;
+  border-radius: 7px !important;
+  border: none !important;
+  box-shadow: none !important;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  // letter-spacing: 0.03em;
+  color: #FFFFFF;
+}
+
+.rs-btn-primary:disabled,
+.rs-btn-primary.rs-btn-disabled {
+  background: #FF0083;
+  border-radius: 8px;
+}
+
+.rs-btn-primary {
+  background: #FF0083;
+  border-radius: 8px;
+}
+
+.rs-picker-toggle {
+  background: #FFFFFF;
+  border: 1px solid #E3E3E3;
+  border-radius: 5px;
+}
+
+.rs-picker-toggle:hover,
+.rs-picker-toggle:focus {
+  background: #FFFFFF;
+  border: 1px solid #E3E3E3;
+  border-radius: 5px;
+}
+
+.rs-picker-toggle .rs-picker-toggle-placeholder {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #181818;
+}
+
+.rs-picker-toggle-active,
+.rs-picker.rs-picker-focused {
+  box-shadow: none !important;
+}
+
+.rs-calendar-table-cell-selected .rs-calendar-table-cell-content {
+  background: #FF0083 !important;
+  border-radius: 7px !important;
+  border: none !important;
+  box-shadow: none !important;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  // letter-spacing: 0.03em;
+  color: #FFFFFF;
+}
+
+.rs-calendar-table-cell-content:hover {
+  background: #FF0083 !important;
+  border-radius: 7px !important;
+  border: none !important;
+  box-shadow: none !important;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  // letter-spacing: 0.03em;
+  color: #FFFFFF;
+}
+
+.rs-calendar-table-cell-in-range::before {
+  background: #FFF7FB;
+}
+
+.rs-picker-menu .rs-calendar .rs-calendar-table-cell:hover .rs-calendar-table-cell-content {
+  color: #fff;
+}
+
+.rs-btn-subtle {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #2D3436;
+}
+
+.rs-picker-has-value .rs-btn .rs-picker-toggle-value,
+.rs-picker-has-value .rs-picker-toggle .rs-picker-toggle-value {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #181818;
+}
+
+.rs-btn-link {
+  color: #ff0083;
+}
+
+@media (max-width:600px) {
+  .rs-picker-daterange-calendar-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .rs-picker-menu {
+    top: 300px !important;
+    right: 30px !important;
+  }
+
+  .rs-picker-menu .rs-calendar {
+    min-width: 300px !important;
+    margin: 0 auto;
+  }
+
+  .rs-picker-daterange-calendar-group {
+    min-width: 300px;
+  }
+
+  .rs-picker-daterange-menu .rs-calendar:first-child {
+    border: none !important;
+  }
+}
+
+
+/* Remove this container when use*/
+.component-title {
+  width: 100%;
+  position: absolute;
+  z-index: 999;
+  top: 30px;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #888;
+  text-align: center;
+}
+
+/* The switch - the box around the slider */
+.fytgyugy {
+  width: 51px;
+  height: 31px;
+  position: relative;
+}
+
+/* Hide default HTML checkbox */
+.checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.switch {
+  width: 44.003px;
+  height: 24px;
+  padding: 2px;
+  display: block;
+  background-color: #B2BEC3;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+/* The slider */
+.slider {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: calc(50% - 27px/2 - 10px);
+  top: calc(50% - 27px/2);
+  background: #FFFFFF;
+  border-radius: 77px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 35, 11, 0.20);
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+}
+
+.checkbox:checked+.switch {
+  background: #FF0083;
+}
+
+.checkbox:checked+.switch .slider {
+  left: calc(50% - 27px/2 + 10px);
+  top: calc(50% - 27px/2);
+}
+
+@media (max-width:600px) {
+  .switch {
+    width: 100%;
+  }
+
+  .checkbox:checked+.switch .slider {
+    left: calc(50% - 6.5px + 10px);
+  }
+}
+
+// .customsss-container {
+//   max-width: 1380px;
+//   padding: 0px 20px;
+//   width: 100%;
+//   margin: 0 auto;
+// }

@@ -1,0 +1,246 @@
+.main-login {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .maincard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .logincard {
+      padding: 35px 50px;
+      border-radius: 20px;
+      width: 100%;
+      max-width: 542px;
+      border-radius: 10px;
+      background: #020202;
+      box-shadow: 0px 3px 50px 0px rgba(0, 0, 0, 0.04);
+
+      .innerlogo {
+        text-align: center;
+      }
+
+      .cardtext {
+        h6 {
+          font-size: 22px;
+          font-weight: 700;
+          line-height: 24px;
+          letter-spacing: 0px;
+          text-align: left;
+          color: #fff;
+          text-align: center;
+          margin-top: 50px;
+          margin-bottom: 15px;
+          text-transform: uppercase;
+        }
+
+        p {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 18px;
+          letter-spacing: 0px;
+          text-align: left;
+          color: #3E3E3E;
+          text-align: center;
+          margin-bottom: 40px;
+        }
+
+        input {
+          padding: 18px 20px;
+          width: 100%;
+          max-width: 442px;
+          margin-bottom: 5px;
+          color: #fff;
+          padding-right: 51px;
+
+
+          border-radius: 5px;
+          border: 1.5px solid var(--stroke, #0C0C0C);
+          background: #020202;
+
+          &::placeholder {
+            color: #1F1F1E;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 130%;
+          }
+        }
+
+        .parent {
+          position: relative;
+
+          img {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+          }
+        }
+      }
+
+      .chec {
+        .material-checkbox {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          font-size: 14px;
+          color: #fff;
+        }
+
+        .material-checkbox input[type="checkbox"] {
+          position: absolute;
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+        .checkmark {
+          position: relative;
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          margin-right: 12px;
+          border: 2px solid #FFD440 ;
+          border-radius: 5px;
+          transition: all 0.3s;
+        }
+
+        .material-checkbox input[type="checkbox"]:checked ~ .checkmark {
+          background-color: #FFD440 ;
+          border-color: #FFD440 ;
+        }
+
+        .material-checkbox input[type="checkbox"]:checked ~ .checkmark:after {
+          content: "";
+          position: absolute;
+          top: 2px;
+          left: 6px;
+          width: 6px;
+          height: 10px;
+          border: solid #000;
+          border-width: 0 2px 2px 0;
+          transform: rotate(45deg);
+        }
+
+        .material-checkbox input[type="checkbox"]:focus ~ .checkmark {
+          box-shadow: 0 0 0 2px #FFD440;
+        }
+
+        .material-checkbox:hover input[type="checkbox"] ~ .checkmark {
+          border-color: #FFD440;
+        }
+
+        .material-checkbox input[type="checkbox"]:disabled ~ .checkmark {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+
+        .material-checkbox input[type="checkbox"]:disabled ~ .checkmark:hover {
+          border-color: #FFD440 ;
+        }
+      }
+
+      .parentinputs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 19px;
+        margin-top: 10px;
+
+        .code {
+          border-radius: 8px;
+
+          background: var(--inputone-bg);
+          border: 1px solid var(--input-border);
+          padding: 20px 17.833px 19px 18px;
+          // width: 57.83px;
+          // height: 76px;
+          width: 100%;
+          color: #FFD440 ;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          // color: #FF0083;
+          // font-size: 34px;
+          // font-weight: 700;
+          // line-height: 110%;
+          // text-transform: uppercase;
+          // text-align: center;
+
+          &:focus {
+            border: 1px solid var(--inputone-border);
+          }
+
+          &::placeholder {
+            color: #FFD440 ;
+            font-size: 34px;
+            font-weight: 700;
+            line-height: 110%;
+            text-transform: uppercase;
+            text-align: center;
+          }
+        }
+      }
+
+      .endbtn {
+        button {
+          padding: 14px 81px;
+          width: 100%;
+          font-size: 16px;
+          color: #000;
+          font-weight: 600;
+          border: none;
+          // margin-top: 40px;
+
+          border-radius: 5px;
+          background: var(--primary-gradient, linear-gradient(90deg, #F9C924 0%, #FFF98C 26.52%, #E4AF18 73.21%, #FFD440 100%));
+        }
+      }
+
+      .digitbtns {
+        button {
+          border-radius: 8px;
+          background: #1c1e1f;
+          padding: 14px 81px;
+          width: 100%;
+          color: #000;
+          font-size: 16px;
+          border: none;
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .main-login .maincard .logincard .cardtext h6 {
+    font-size: 16px;
+    margin-top: 40px;
+  }
+
+  .main-login .maincard .logincard .parentinputs .code {
+    padding: 17px 7px;
+  }
+
+  .main-login .maincard .logincard .parentinputs {
+    gap: 10px;
+    margin-top: 0px;
+  }
+
+  .main-login .maincard .logincard .digitbtns button {
+    margin-top: 40px;
+  }
+  .main-login .maincard .logincard {
+    padding: 20px;
+  }
+  .main-login .maincard .logincard .cardtext input {
+    padding: 14px 20px;
+    max-width: 100%;
+    padding-right: 50px;
+  }
+  .main-login .maincard .logincard .cardtext .parent img {
+    top: 15px;
+  }
+}
